@@ -8,7 +8,7 @@ install:
     - pip install python-coveralls pytest-cov
 
 script:
-    - py.test -v --cov aiohttp_ext_handlers --cov-report term-missing
+    - py.test tests.py -v --cov aiohttp_ext_handlers --cov-report term-missing
 
 after_success:
     - coveralls
