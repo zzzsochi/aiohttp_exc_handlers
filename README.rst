@@ -2,6 +2,14 @@
 Bind views to exceptions for aiohttp
 ====================================
 
+.. image:: https://travis-ci.org/zzzsochi/aiohttp_exc_handlers.svg?branch=master
+  :target:  https://travis-ci.org/zzzsochi/aiohttp_exc_handlers
+  :align: right
+
+.. image:: https://coveralls.io/repos/zzzsochi/aiohttp_exc_handlers/badge.svg
+  :target:  https://coveralls.io/github/zzzsochi/aiohttp_exc_handlers
+  :align: right
+
 -----
 Usage
 -----
