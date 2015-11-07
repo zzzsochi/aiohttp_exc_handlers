@@ -3,6 +3,8 @@ import logging
 
 from aiohttp.web_exceptions import HTTPException
 
+from resolver_deco import resolver
+
 log = logging.getLogger(__name__)
 
 
@@ -36,6 +38,7 @@ def exc_handlers_middleware(app, handler):
     return middleware
 
 
+@resolver('exc', 'handler')
 def bind_exc_handler(app, exc, handler):
     if exc_handlers_middleware not in app._middlewares:
         raise RuntimeError("not found exc_handlers_middleware"

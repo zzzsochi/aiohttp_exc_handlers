@@ -1,5 +1,6 @@
 import asyncio
 import functools
+from unittest.mock import Mock
 
 import pytest
 
@@ -30,7 +31,7 @@ def app():
 def test_bind_exc_handler__first(app):
     assert 'exc_handlers' not in app
 
-    handler = 'handler'
+    handler = Mock(name='handler')
     bind_exc_handler(app, RuntimeError, handler)
 
     assert 'exc_handlers' in app
@@ -40,7 +41,7 @@ def test_bind_exc_handler__first(app):
 def test_bind_exc_handler__exists(app):
     app['exc_handlers'] = {ValueError: 'handler_old'}
 
-    handler = 'handler'
+    handler = Mock(name='handler')
     bind_exc_handler(app, RuntimeError, handler)
 
     assert app['exc_handlers'][RuntimeError] == handler
@@ -51,7 +52,7 @@ def test_bind_exc_handler__middleware_not_exist(app):
     app._middlewares.clear()
 
     with pytest.raises(RuntimeError):
-        bind_exc_handler(app, ValueError, 'handler')
+        bind_exc_handler(app, ValueError, Mock(name='handler'))
 
 
 @coroutine
