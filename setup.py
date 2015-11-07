@@ -2,9 +2,9 @@ from setuptools import setup
 
 
 setup(
-    name='aiohttp_ext_handlers',
+    name='aiohttp_exc_handlers',
     version='0.1',
-    description='Handlers for exceptions from views in aiohttp',
+    description='Bind views to exceptions for aiohttp',
     classifiers=[
         "License :: OSI Approved :: BSD License",
         "Operating System :: POSIX",
