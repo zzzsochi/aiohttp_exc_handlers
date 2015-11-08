@@ -19,7 +19,7 @@ Usage
     import asyncio
 
     from aiohttp import web
-    from aiohttp_ext_handlers import (
+    from aiohttp_exc_handlers import (
         exc_handlers_middleware,
         bind_exc_handler,
     )

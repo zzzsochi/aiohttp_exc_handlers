@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='aiohttp_exc_handlers',
-    version='0.1',
+    version='0.2',
     description='Bind views to exceptions for aiohttp',
     classifiers=[
         "License :: OSI Approved :: BSD License",
@@ -15,9 +15,9 @@ setup(
     author='Alexander Zelenyak',
     author_email='zzz.sochi@gmail.com',
     license='BSD',
-    url='https://github.com/zzzsochi/aiohttp_ext_handlers',
+    url='https://github.com/zzzsochi/aiohttp_exc_handlers',
     keywords=['asyncio', 'aiohttp'],
-    py_modules=['aiohttp_ext_handlers'],
+    py_modules=['aiohttp_exc_handlers'],
     install_requires=[
         'aiohttp',
         'resolver_deco',

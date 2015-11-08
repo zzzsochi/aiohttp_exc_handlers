@@ -5,7 +5,7 @@ from unittest.mock import Mock
 import pytest
 
 from aiohttp.web_exceptions import HTTPMethodNotAllowed
-from aiohttp_ext_handlers import exc_handlers_middleware, bind_exc_handler
+from aiohttp_exc_handlers import exc_handlers_middleware, bind_exc_handler
 
 
 def coroutine(func):
