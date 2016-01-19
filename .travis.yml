@@ -5,10 +5,10 @@ python:
 
 install:
     - python3 setup.py install
-    - pip install python-coveralls pytest-cov
+    - pip install pytest pytest-cov coveralls
 
 script:
-    - py.test tests.py -v --cov aiohttp_ext_handlers --cov-report term-missing
+    - py.test tests.py -v --cov aiohttp_exc_handlers --cov-report term-missing
 
 after_success:
     - coveralls
